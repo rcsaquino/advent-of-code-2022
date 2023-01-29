@@ -1,3 +1,25 @@
+fn get_priority(letter: char) -> u32 {
+    let alphabet = "abcdefghijklmnopqrstuvwxyz".to_string();
+    let lower_case_vec: Vec<char> = alphabet.chars().collect();
+    let upper_case_vec: Vec<char> = alphabet.to_uppercase().chars().collect();
+
+    let priority;
+    if lower_case_vec.contains(&letter) {
+        priority = lower_case_vec
+            .iter()
+            .position(|character| character == &letter)
+            .unwrap()
+            + 1;
+    } else {
+        priority = upper_case_vec
+            .iter()
+            .position(|character| character == &letter)
+            .unwrap()
+            + 27;
+    }
+    return priority as u32;
+}
+
 pub fn print_answer(input: String) {
     // Part 1
     let mut priority_sum: u32 = 0;
@@ -27,26 +49,4 @@ pub fn print_answer(input: String) {
         }
     }
 	println!("Part 2: {priority_sum}");
-}
-
-fn get_priority(letter: char) -> u32 {
-    let alphabet = "abcdefghijklmnopqrstuvwxyz".to_string();
-    let lower_case_vec: Vec<char> = alphabet.chars().collect();
-    let upper_case_vec: Vec<char> = alphabet.to_uppercase().chars().collect();
-
-    let priority;
-    if lower_case_vec.contains(&letter) {
-        priority = lower_case_vec
-            .iter()
-            .position(|character| character == &letter)
-            .unwrap()
-            + 1;
-    } else {
-        priority = upper_case_vec
-            .iter()
-            .position(|character| character == &letter)
-            .unwrap()
-            + 27;
-    }
-    return priority as u32;
 }
