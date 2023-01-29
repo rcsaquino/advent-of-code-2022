@@ -1,5 +1,3 @@
-// https://adventofcode.com/
-
 use std::fs;
 mod solutions;
 fn main() {
