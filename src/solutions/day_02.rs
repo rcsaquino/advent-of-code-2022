@@ -27,8 +27,8 @@ pub fn print_answer(input: String) {
 
         _ => {}
     });
-
-	println!("Day 2 (Part 1): {score}");
+    println!("---DAY 2---");
+	println!("Part 1: {score}");
 
 	// Part 2
 	score = 0;
@@ -47,8 +47,7 @@ pub fn print_answer(input: String) {
 
         _ => {}
     });
-
-	println!("Day 2 (Part 2): {score}");
+	println!("Part 2: {score}");
 }
 
 fn update_score(mut score: u32, result: Result, shape: Shape) -> u32 {

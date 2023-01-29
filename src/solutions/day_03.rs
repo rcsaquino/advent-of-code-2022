@@ -11,7 +11,8 @@ pub fn print_answer(input: String) {
             }
         }
     });
-    println!("Day 3 (Part 1): {priority_sum}");
+    println!("---DAY 3---");
+    println!("Part 1: {priority_sum}");
 
     // Part 2
     priority_sum = 0;
@@ -25,7 +26,7 @@ pub fn print_answer(input: String) {
             }
         }
     }
-	println!("Day 3 (Part 2): {priority_sum}");
+	println!("Part 2: {priority_sum}");
 }
 
 fn get_priority(letter: char) -> u32 {

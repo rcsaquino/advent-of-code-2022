@@ -11,6 +11,7 @@ pub fn print_answer(input: String) {
 	
     total_vec.sort_by(|a, b| b.cmp(a));
 
-    println!("Day 1 (Part 1): {:?}", total_vec[0]);
-    println!("Day 1 (Part 2): {}", total_vec.iter().take(3).sum::<u32>())
+    println!("---DAY 1---");
+    println!("Part 1: {:?}", total_vec[0]);
+    println!("Part 2: {}", total_vec.iter().take(3).sum::<u32>())
 }
