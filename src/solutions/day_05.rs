@@ -7,18 +7,10 @@ pub fn print_answer(input: String) {
         if i < 8 {
             for (i, c) in line.chars().enumerate() {
                 if alphabet.contains(c) {
-                    stacks_1[(i - 1) / 4].push(c)
+                    stacks_1[(i - 1) / 4].insert(0, c);
+                    stacks_2[(i - 1) / 4].insert(0, c)
                 }
             }
-        }
-
-        // Free line. Use to reverse vectors.
-        if i == 8 {
-            for x in 0..stacks_1.len() {
-                stacks_1[x].reverse()
-            }
-
-            stacks_2 = stacks_1.clone();
         }
 
         // Instructions
