@@ -5,4 +5,5 @@ fn main() {
     solutions::day_02::print_answer(fs::read_to_string("./src/inputs/day_02.txt").unwrap());
     solutions::day_03::print_answer(fs::read_to_string("./src/inputs/day_03.txt").unwrap());
     solutions::day_04::print_answer(fs::read_to_string("./src/inputs/day_04.txt").unwrap());
+    solutions::day_05::print_answer(fs::read_to_string("./src/inputs/day_05.txt").unwrap());
 }
