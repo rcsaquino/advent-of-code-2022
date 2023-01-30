@@ -9,9 +9,25 @@ enum Shape {
     Scissors,
 }
 
+fn update_score(mut score: u32, result: Result, shape: Shape) -> u32 {
+    match result {
+        Result::Win => score += 6,
+        Result::Draw => score += 3,
+        Result::Lose => score += 0,
+    }
+
+    match shape {
+        Shape::Rock => score += 1,
+        Shape::Paper => score += 2,
+        Shape::Scissors => score += 3,
+    }
+
+    return score;
+}
+
 pub fn print_answer(input: String) {
-	// Part 1
-	let mut score: u32 = 0;
+    // Part 1
+    let mut score: u32 = 0;
     input.split("\r\n").for_each(|scenario| match scenario {
         "A X" => score = update_score(score, Result::Draw, Shape::Rock),
         "A Y" => score = update_score(score, Result::Win, Shape::Paper),
@@ -28,11 +44,11 @@ pub fn print_answer(input: String) {
         _ => {}
     });
     println!("---DAY 2---");
-	println!("Part 1: {score}");
+    println!("Part 1: {score}");
 
-	// Part 2
-	score = 0;
-	input.split("\r\n").for_each(|scenario| match scenario {
+    // Part 2
+    score = 0;
+    input.split("\r\n").for_each(|scenario| match scenario {
         "A X" => score = update_score(score, Result::Lose, Shape::Scissors),
         "A Y" => score = update_score(score, Result::Draw, Shape::Rock),
         "A Z" => score = update_score(score, Result::Win, Shape::Paper),
@@ -47,21 +63,5 @@ pub fn print_answer(input: String) {
 
         _ => {}
     });
-	println!("Part 2: {score}");
-}
-
-fn update_score(mut score: u32, result: Result, shape: Shape) -> u32 {
-    match result {
-        Result::Win => score += 6,
-        Result::Draw => score += 3,
-        Result::Lose => score += 0,
-    }
-
-    match shape {
-        Shape::Rock => score += 1,
-        Shape::Paper => score += 2,
-        Shape::Scissors => score += 3,
-    }
-
-    return score;
+    println!("Part 2: {score}");
 }
