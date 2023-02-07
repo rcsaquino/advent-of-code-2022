@@ -1,1 +1,1 @@
-[My solutions](https://github.com/rcsaquino/advent-of-code-2022/tree/main/src/solutions) to [Advent of Code 2022](https://adventofcode.com/) using the [Rust Programming Language](https://www.rust-lang.org/).
+[My solutions](https://github.com/rcsaquino/advent-of-code-2022/tree/main/src/solutions) to [Advent of Code 2022](https://adventofcode.com/2022) using the [Rust Programming Language](https://www.rust-lang.org/).
