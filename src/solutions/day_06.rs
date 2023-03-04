@@ -1,5 +1,5 @@
 pub fn print_answer(input: String) {
-    println!("---DAY 5---");
+    println!("---DAY 6---");
     println!("Part 1: {}", get_marker(&input, 4));
     println!("Part 2: {}", get_marker(&input, 14));
 }
