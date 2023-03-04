@@ -8,4 +8,5 @@ fn main() {
     solutions::day_04::print_answer(fs::read_to_string("./src/inputs/day_04.txt").unwrap());
     solutions::day_05::print_answer(fs::read_to_string("./src/inputs/day_05.txt").unwrap());
     solutions::day_06::print_answer(fs::read_to_string("./src/inputs/day_06.txt").unwrap());
+    solutions::day_07::print_answer(fs::read_to_string("./src/inputs/day_07.txt").unwrap());
 }
